@@ -8,4 +8,4 @@ Try to:
 3. minimize total_elevator_traveled_distance  
 4. maximize total_delivered_people  
 
-    * Refer to this article http://www.businessinsider.com/the-8-fastest-elevators-in-the-world-2013-1?IR=T&op=1, speed of elevator can maximize delivered people and minimize people wait in / out elevator. So, in this case I invoked Object parameters with new value about speed and max num people
+    * Refer to this article http://www.businessinsider.com/the-8-fastest-elevators-in-the-world-2013-1?IR=T&op=1, speed of elevator can maximize delivered people and minimize people wait in / out elevator. So, in this case I invoked Object parameters with new value about speed and max num people (Commit log: 0c1f36d)
