@@ -41,10 +41,8 @@
  * building.get_num_floors()
  */
 
-var newConfig = Config;
-newConfig.elevator_speed_m_per_s = 2
-
 Elevator.prototype.decide = function() {
+
     var simulator = Simulator.get_instance();
     var building = simulator.get_building();
     var num_floors = building.get_num_floors();
@@ -69,7 +67,7 @@ Elevator.prototype.decide = function() {
 
     for(var i = 0;i < requests.length;i++) {
         var handled = false;
-        for(var j = 0;j < elevators.length;j++) {
+        for(var j = 0;j < elevators.length - 1;j++) {
             if(elevators[j].get_destination_floor() == requests[i]) {
                 handled = true;
                 break;
@@ -80,5 +78,12 @@ Elevator.prototype.decide = function() {
         }
     }
 
+    /*-----invoked Elevator and apply to arguments with new value-----*/
+    var properties = {
+      speed_m_per_s: 2,
+      max_num_people: 100
+    }
+    Elevator.apply(this, [properties])
+    /*----------------------------------------------------------------*/
     return this.commit_decision(Math.floor(num_floors / 2));
 };
