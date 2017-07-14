@@ -81,7 +81,7 @@ Elevator.prototype.decide = function() {
     /*-----invoked Elevator and apply to arguments with new value-----*/
     var properties = {
       speed_m_per_s: 2,
-      max_num_people: 100
+      max_num_people: 20
     }
     Elevator.apply(this, [properties])
     /*----------------------------------------------------------------*/
